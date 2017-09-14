@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/assets/styles.css">
+        <meta charset="utf-8">
+        <title>index</title>
+    </head>
+    <body>
+        <% include partials/navbar.ejs %>
+        <h1>welcome to the profile of <%= data.name %></h1>
+        <p><strong>Age: </strong><%= data.age %></p>
+
+        <h2>Hobbies</h2>
+        <ul>
+            <%data.hobbies.forEach(function (item) { %>
+                <li><%=item%></li>
+            <% }); %>
+        </ul>
+    </body>
+</html>
